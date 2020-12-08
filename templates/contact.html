@@ -24,7 +24,7 @@
 <section class="section-margin--small section-margin">
   <div class="container">
     <div class="d-none d-sm-block mb-5 pb-4">
-      Тут будет карта
+      {{ html_map|safe }}
     </div>
 
 
@@ -162,5 +162,5 @@
 </footer>
 <!--================ End Footer Area =================-->
 
-<script src="/home/olga/Desktop/Мои проекты/блог/scripts.js"></script>
+<script src="{% static 'scripts.js' %}"></script>
 {% endblock %}
