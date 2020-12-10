@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
+  
 {% block title %}
   {{ post.title }} - Blog Details
 {% endblock %}
+  
 {% block content %}
-
 <!--================ Hero sm Banner start =================-->
 <section class="mb-30px">
   <div class="container">
@@ -23,9 +24,6 @@
 </section>
 <!--================ Hero sm Banner end =================-->
 
-
-
-
 <!--================ Start Blog Post Area =================-->
 <section class="blog-post-area section-margin">
   <div class="container">
@@ -33,9 +31,9 @@
       <div class="col-lg-8">
         <div class="main_blog_details">
           {% if post.image_url %}
-          <img class="img-fluid" src="{{ post.image_url }}" alt="">
+            <img class="img-fluid" src="{{ post.image_url }}" alt="">
           {% else %}
-          <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="">
+            <img class="img-fluid" src="{% static 'img/banner/blog.png' %}" alt="">
           {% endif %}
           <h4>{{ post.title }}</h4>
           <div class="user_details">
@@ -62,11 +60,9 @@
             </div>
           </div>
         </div>
-
-
         <div class="comments-area">
           <h4>{{ post.comments|length }} Comments</h4>
-          {% for comment in post.comments %}
+            {% for comment in post.comments %}
           <div class="comment-list">
             <div class="single-comment justify-content-between d-flex">
               <div class="user justify-content-between d-flex">
@@ -85,7 +81,6 @@
         </div>
       </div>
 
-
       <!-- Start Blog Post Siddebar -->
       <div class="col-lg-4 sidebar-widgets">
         <div class="widget-wrap">
@@ -99,8 +94,6 @@
             </div>
             <button class="bbtns d-block mt-20 w-100">Subcribe</button>
           </div>
-
-
           <div class="single-sidebar-widget post-category-widget">
             <h4 class="single-sidebar-widget" style="height:200px;">Здесь будет реклама</h4>
           </div>
